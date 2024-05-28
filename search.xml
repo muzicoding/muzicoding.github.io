@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title>Hello</title>
-      <link href="/2024/05/28/hello/"/>
-      <url>/2024/05/28/hello/</url>
+      <title>ssh连接macOS服务器</title>
+      <link href="/2024/05/28/ssh%E8%BF%9E%E6%8E%A5macOS%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <url>/2024/05/28/ssh%E8%BF%9E%E6%8E%A5macOS%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
       
-        <content type="html"><![CDATA[<p>kajdgklasdcv<br>zxcvasd<br>cdhjv<br>kkdjnv</p>]]></content>
+        <content type="html"><![CDATA[<p>突发奇想想把吃灰的MacBook Pro2018 用作服务器，装上MySQL用来当数据库服务器。<br>所以要设置在同一局域网内ssh连接mac的方式。</p><p>在mac的设置中搜索“共享”，找到“高级”，“远程登录”打开就好了。<br><img src="https://muzicoding.oss-cn-hangzhou.aliyuncs.com/%E9%97%AE%E9%A2%98%E6%9D%82%E8%B0%88%EF%BC%9Assh%E8%BF%9E%E6%8E%A5macOS%E6%9C%8D%E5%8A%A1%E5%99%A8/Snipaste_2024-05-28_10-21-13.jpg"></p><p>“远程登录”按钮右边点进去可以设置允许访问的用户和群组。<br><img src="https://muzicoding.oss-cn-hangzhou.aliyuncs.com/%E9%97%AE%E9%A2%98%E6%9D%82%E8%B0%88%EF%BC%9Assh%E8%BF%9E%E6%8E%A5macOS%E6%9C%8D%E5%8A%A1%E5%99%A8/Snipaste_2024-05-28_10-25-19.jpg"></p><p>要远程登录在另一台电脑中输入“ssh 用户名@ip地址”，然后输入密码就好了。<br><img src="https://muzicoding.oss-cn-hangzhou.aliyuncs.com/%E9%97%AE%E9%A2%98%E6%9D%82%E8%B0%88%EF%BC%9Assh%E8%BF%9E%E6%8E%A5macOS%E6%9C%8D%E5%8A%A1%E5%99%A8/483C5B4616221D8FF6EDA31B78F3424D.jpg"></p><p>PS：配置好mac数据库，用另一台电脑测试数据库连接时，发现mac的防火墙竟然是默认关闭。</p>]]></content>
       
       
+      <categories>
+          
+          <category> 问题杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ssh </tag>
+            
+            <tag> mac </tag>
+            
+        </tags>
       
     </entry>
     
@@ -33,20 +47,20 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>一个敲代码的人</p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
