@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>leetcode日记(7)Java栈常用操作</title>
+      <link href="/2024/06/16/leetcode%E6%97%A5%E8%AE%B0(7)Java%E6%A0%88%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
+      <url>/2024/06/16/leetcode%E6%97%A5%E8%AE%B0(7)Java%E6%A0%88%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Java栈常用操作"><a href="#Java栈常用操作" class="headerlink" title="Java栈常用操作"></a>Java栈常用操作</h1><h2 id="创建栈Stack"><a href="#创建栈Stack" class="headerlink" title="创建栈Stack"></a>创建栈Stack</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create a stack</span></span><br><span class="line">Stack&lt;Integer&gt; stack = <span class="keyword">new</span> <span class="title class_">Stack</span>&lt;&gt;();</span><br></pre></td></tr></table></figure><h2 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Add element</span></span><br><span class="line"><span class="comment">// Time Complexity: O(1)</span></span><br><span class="line">stack.push(<span class="number">1</span>);</span><br><span class="line">stack.push(<span class="number">2</span>);</span><br><span class="line">stack.push(<span class="number">3</span>);</span><br><span class="line"><span class="comment">// [1, 2, 3]</span></span><br><span class="line">System.out.println(stack.toString());</span><br></pre></td></tr></table></figure><h2 id="获取栈顶元素"><a href="#获取栈顶元素" class="headerlink" title="获取栈顶元素"></a>获取栈顶元素</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Get the top of stack</span></span><br><span class="line"><span class="comment">// Time Complexity: O(1)</span></span><br><span class="line"><span class="comment">// 3</span></span><br><span class="line"><span class="type">int</span> <span class="variable">item</span> <span class="operator">=</span> stack.peek();</span><br><span class="line">System.out.println(item);</span><br></pre></td></tr></table></figure><h2 id="删除栈顶元素"><a href="#删除栈顶元素" class="headerlink" title="删除栈顶元素"></a>删除栈顶元素</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Remove the top of stack</span></span><br><span class="line"><span class="comment">// Time Complexity: O(1)</span></span><br><span class="line"><span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> stack.pop();</span><br><span class="line"><span class="comment">// 3</span></span><br><span class="line">System.out.println(temp);</span><br></pre></td></tr></table></figure><h2 id="栈的大小"><a href="#栈的大小" class="headerlink" title="栈的大小"></a>栈的大小</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Stack length</span></span><br><span class="line"><span class="comment">// Time Complexity: O(1)</span></span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line">stack.size();</span><br></pre></td></tr></table></figure><h2 id="栈是否为空"><a href="#栈是否为空" class="headerlink" title="栈是否为空"></a>栈是否为空</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Stack is empty?</span></span><br><span class="line"><span class="comment">// Time Complexity: O(1)</span></span><br><span class="line"><span class="comment">// false</span></span><br><span class="line">stack.isEmpty();</span><br></pre></td></tr></table></figure><h2 id="栈的遍历（边删除边遍历）"><a href="#栈的遍历（边删除边遍历）" class="headerlink" title="栈的遍历（边删除边遍历）"></a>栈的遍历（边删除边遍历）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Iterate a stacke</span></span><br><span class="line"><span class="comment">// Time Complexity: O(N)</span></span><br><span class="line"><span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> stack.pop();</span><br><span class="line">    System.out.println(num);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>leetcode日记(6)队列相关题933</title>
       <link href="/2024/06/08/Leetcode%E6%97%A5%E8%AE%B0(6)%E9%98%9F%E5%88%97%E7%9B%B8%E5%85%B3933/"/>
       <url>/2024/06/08/Leetcode%E6%97%A5%E8%AE%B0(6)%E9%98%9F%E5%88%97%E7%9B%B8%E5%85%B3933/</url>
