@@ -54,6 +54,31 @@
     
     
     <entry>
+      <title>leetcode日记(10)哈希表相关题217_389_496</title>
+      <link href="/2024/06/17/Leetcode%E6%97%A5%E8%AE%B0(10)%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9B%B8%E5%85%B3%E9%A2%98217_389_496/"/>
+      <url>/2024/06/17/Leetcode%E6%97%A5%E8%AE%B0(10)%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9B%B8%E5%85%B3%E9%A2%98217_389_496/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Leetcode217"><a href="#Leetcode217" class="headerlink" title="Leetcode217"></a>Leetcode217</h2><p><img src="https://github.com/muzicoding/Img/blob/master/leetcode%E6%97%A5%E8%AE%B0/%E5%93%88%E5%B8%8C%E8%A1%A8/Snipaste_2024-06-18_10-55-46.jpg?raw=true"></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">containsDuplicate</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> x : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!set.add(x)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="Leetcode389"><a href="#Leetcode389" class="headerlink" title="Leetcode389"></a>Leetcode389</h2><p><img src="https://github.com/muzicoding/Img/blob/master/leetcode%E6%97%A5%E8%AE%B0/%E5%93%88%E5%B8%8C%E8%A1%A8/Snipaste_2024-06-18_11-30-08.jpg?raw=true"></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">char</span> <span class="title function_">findTheDifference</span><span class="params">(String s, String t)</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] cnt = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">26</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">ch</span> <span class="operator">=</span> s.charAt(i);</span><br><span class="line">            cnt[ch - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; t.length(); i++) &#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">ch</span> <span class="operator">=</span> t.charAt(i);</span><br><span class="line">            cnt[ch - <span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">            <span class="keyword">if</span> (cnt[ch - <span class="string">&#x27;a&#x27;</span>] &lt; <span class="number">0</span> ) &#123;</span><br><span class="line">                <span class="keyword">return</span> ch;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>leetcode日记(7)Java栈常用操作</title>
       <link href="/2024/06/16/Leetcode%E6%97%A5%E8%AE%B0(7)Java%E6%A0%88%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
       <url>/2024/06/16/Leetcode%E6%97%A5%E8%AE%B0(7)Java%E6%A0%88%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</url>
