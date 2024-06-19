@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>leetcode日记(11)Java集合常用操作</title>
+      <link href="/2024/06/19/Leetcode%E6%97%A5%E8%AE%B0(11)Java%E9%9B%86%E5%90%88%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
+      <url>/2024/06/19/Leetcode%E6%97%A5%E8%AE%B0(11)Java%E9%9B%86%E5%90%88%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Java集合常用操作"><a href="#Java集合常用操作" class="headerlink" title="Java集合常用操作"></a>Java集合常用操作</h1><h2 id="创建一个集合"><a href="#创建一个集合" class="headerlink" title="创建一个集合"></a>创建一个集合</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create HashSet</span></span><br><span class="line">HashSet&lt;Integer&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br></pre></td></tr></table></figure><h2 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Add element</span></span><br><span class="line"><span class="comment">// Time Complexity: O(1)</span></span><br><span class="line">set.add(<span class="number">10</span>);</span><br><span class="line">set.add(<span class="number">3</span>);</span><br><span class="line">set.add(<span class="number">5</span>);</span><br><span class="line">set.add(<span class="number">2</span>);</span><br><span class="line">set.add(<span class="number">2</span>);</span><br><span class="line"><span class="comment">// [10, 3, 5, 2]</span></span><br><span class="line">System.out.println(set);</span><br></pre></td></tr></table></figure><h2 id="搜索元素"><a href="#搜索元素" class="headerlink" title="搜索元素"></a>搜索元素</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Search element</span></span><br><span class="line">set.contains(<span class="number">2</span>);</span><br></pre></td></tr></table></figure><h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Delete element</span></span><br><span class="line">set.remove(<span class="number">2</span>);</span><br><span class="line">System.out.println(set);</span><br></pre></td></tr></table></figure><h2 id="集合大小"><a href="#集合大小" class="headerlink" title="集合大小"></a>集合大小</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Size</span></span><br><span class="line">set.size();</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode日记(12)集合相关题705</title>
+      <link href="/2024/06/19/Leetcode%E6%97%A5%E8%AE%B0(12)%E9%9B%86%E5%90%88%E7%9B%B8%E5%85%B3%E9%A2%98705/"/>
+      <url>/2024/06/19/Leetcode%E6%97%A5%E8%AE%B0(12)%E9%9B%86%E5%90%88%E7%9B%B8%E5%85%B3%E9%A2%98705/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Leetcode705"><a href="#Leetcode705" class="headerlink" title="Leetcode705"></a>Leetcode705</h2><p><img src="https://github.com/muzicoding/Img/blob/master/leetcode%E6%97%A5%E8%AE%B0/%E9%9B%86%E5%90%88/Snipaste_2024-06-19_10-07-33.jpg?raw=true"></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyHashSet</span> &#123;</span><br><span class="line">    <span class="type">boolean</span>[] hashset = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyHashSet</span><span class="params">()</span> &#123;</span><br><span class="line">        hashset = <span class="keyword">new</span> <span class="title class_">boolean</span>[<span class="number">1000001</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> key)</span> &#123;</span><br><span class="line">        hashset[key] = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">remove</span><span class="params">(<span class="type">int</span> key)</span> &#123;</span><br><span class="line">        hashset[key] = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(<span class="type">int</span> key)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> hashset[key];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>leetcode日记(9)Java哈希表常用操作</title>
       <link href="/2024/06/18/Leetcode%E6%97%A5%E8%AE%B0(9)Java%E5%93%88%E5%B8%8C%E8%A1%A8%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
       <url>/2024/06/18/Leetcode%E6%97%A5%E8%AE%B0(9)Java%E5%93%88%E5%B8%8C%E8%A1%A8%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</url>
