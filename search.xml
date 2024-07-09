@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>leetcode日记(13)Java堆常用操作</title>
+      <link href="/2024/07/09/Leetcode%E6%97%A5%E8%AE%B0(13)Java%E5%A0%86%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
+      <url>/2024/07/09/Leetcode%E6%97%A5%E8%AE%B0(13)Java%E5%A0%86%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Java堆常用操作"><a href="#Java堆常用操作" class="headerlink" title="Java堆常用操作"></a>Java堆常用操作</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create a min heap</span></span><br><span class="line">PriorityQueue&lt;Integer&gt; minheap = <span class="keyword">new</span> <span class="title class_">PriorityQueue</span>&lt;&gt;();</span><br><span class="line"><span class="comment">// Create a max heap</span></span><br><span class="line">PriorityQueue&lt;Integer&gt; maxheap = <span class="keyword">new</span> <span class="title class_">PriorityQueue</span>&lt;&gt;(Collections.reverseOrder());</span><br><span class="line"></span><br><span class="line"><span class="comment">// Add Element</span></span><br><span class="line">minheap.add(<span class="number">10</span>);</span><br><span class="line">minheap.add(<span class="number">8</span>);</span><br><span class="line">minheap.add(<span class="number">9</span>);</span><br><span class="line">minheap.add(<span class="number">11</span>);</span><br><span class="line">minheap.add(<span class="number">2</span>);</span><br><span class="line">maxheap.add(<span class="number">10</span>);</span><br><span class="line">maxheap.add(<span class="number">8</span>);</span><br><span class="line">maxheap.add(<span class="number">9</span>);</span><br><span class="line">maxheap.add(<span class="number">11</span>);</span><br><span class="line">maxheap.add(<span class="number">2</span>);</span><br><span class="line"><span class="comment">// [2, 8, 9, 11, 10]</span></span><br><span class="line">System.out.println(minheap);</span><br><span class="line"><span class="comment">// [11, 10, 9, 8, 2]</span></span><br><span class="line">System.out.println(maxheap);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Peak Element</span></span><br><span class="line">minheap.peek();</span><br><span class="line">maxheap.peek();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Delete the top element</span></span><br><span class="line">minheap.poll();</span><br><span class="line">maxheap.poll();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Size</span></span><br><span class="line">minheap.size();</span><br><span class="line">maxheap.size();</span><br><span class="line"></span><br><span class="line"><span class="comment">// iteration</span></span><br><span class="line"><span class="keyword">while</span> (!minheap.isEmpty()) &#123;</span><br><span class="line">    System.out.println(minheap.poll());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode日记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>组会6.28论文阅读</title>
       <link href="/2024/06/28/%E7%BB%84%E4%BC%9A%206.28%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
       <url>/2024/06/28/%E7%BB%84%E4%BC%9A%206.28%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</url>
